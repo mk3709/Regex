@@ -84,7 +84,7 @@ public class UserRegistration {
 
     public static  boolean isPasswordValid(String password)
     {
-        String regex=".{8,}";
+        String regex="^(?=.*[A-Z]).{8,}$";
 
         Pattern pattern =Pattern.compile(regex);
         Matcher matcher =pattern.matcher(password);
